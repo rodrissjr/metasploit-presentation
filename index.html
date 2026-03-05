@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metasploit: Night Sky Hacker</title>
+    <link rel="stylesheet" href="/styles/meta.css">
+   
+</head>
+<body>
+    <div class="night-sky">
+        <div class="stars-bg"></div>
+        <div class="galaxy"></div>
+        
+        <div class="title">$ ./metasploit_night.sh --meteors</div>
+        <div class="instructions">[ 5 slides | core is hoverable ]</div>
+        
+        <!-- METASPLOIT CORE -->
+        <div class="metasploit-core" id="core">
+            <div class="core-info">
+                <h2>◈ METASPLOIT ◈</h2>
+                <p>The Hacker's Swiss Army Knife</p>
+                <code># msfconsole</code>
+                <p style="font-size: 10px; margin-top: 10px;">2147 exploits • 592 payloads</p>
+            </div>
+        </div>
+
+        <!-- STARS -->
+        <div class="star" id="star1" data-info="exploit/multi/samba/usermap_script">
+            <div class="star-info">samba/usermap_script<br>CVE-2007-2447</div>
+        </div>
+        <div class="star" id="star2" data-info="payload/windows/shell_reverse_tcp">
+            <div class="star-info">windows/shell_reverse_tcp<br>PORT 4444</div>
+        </div>
+        <div class="star" id="star3" data-info="auxiliary/scanner/portscan/tcp">
+            <div class="star-info">scanner/portscan/tcp<br>recon module</div>
+        </div>
+        <div class="star" id="star4" data-info="post/linux/gather/hashdump">
+            <div class="star-info">linux/hashdump<br>/etc/shadow</div>
+        </div>
+        <div class="star" id="star5" data-info="exploit/windows/smb/ms17_010_eternalblue">
+            <div class="star-info">windows/eternalblue<br>MS17-010</div>
+        </div>
+        <div class="star" id="star6" data-info="encoder/x86/shikata_ga_nai">
+            <div class="star-info">shikata_ga_nai<br>polymorphic</div>
+        </div>
+        <div class="star" id="star7" data-info="exploit/multi/http/struts2_rest_xstream">
+            <div class="star-info">struts2_rest_xstream<br>CVE-2017-9805</div>
+        </div>
+        <div class="star" id="star8" data-info="auxiliary/dos/http/slowloris">
+            <div class="star-info">slowloris<br>DoS attack</div>
+        </div>
+        <div class="star" id="star9" data-info="payload/android/meterpreter/reverse_tcp">
+            <div class="star-info">android/meterpreter<br>mobile</div>
+        </div>
+        <div class="star" id="star10" data-info="exploit/multi/script/web_delivery">
+            <div class="star-info">web_delivery<br>script exploit</div>
+        </div>
+        <div class="star" id="star11" data-info="post/windows/gather/credentials/windows_autologin">
+            <div class="star-info">windows_autologin<br>plaintext creds</div>
+        </div>
+        <div class="star" id="star12" data-info="auxiliary/server/browser_autopwn2">
+            <div class="star-info">browser_autopwn<br>drive-by</div>
+        </div>
+        <div class="star" id="star13" data-info="exploit/multi/misc/java_rmi_server">
+            <div class="star-info">java_rmi_server<br>CVE-2011-3556</div>
+        </div>
+        <div class="star" id="star14" data-info="payload/linux/x86/meterpreter/reverse_tcp">
+            <div class="star-info">linux/meterpreter<br>x86 reverse</div>
+        </div>
+        <div class="star" id="star15" data-info="auxiliary/scanner/ssh/ssh_login">
+            <div class="star-info">ssh_login<br>bruteforce</div>
+        </div>
+        <div class="star" id="star16" data-info="post/multi/manage/shell_to_meterpreter">
+            <div class="star-info">shell_to_meterpreter<br>upgrade shell</div>
+        </div>
+        <div class="star" id="star17" data-info="exploit/windows/local/ms10_015_kitrap0d">
+            <div class="star-info">kitrap0d<br>local privesc</div>
+        </div>
+        <div class="star" id="star18" data-info="auxiliary/scanner/http/dir_scanner">
+            <div class="star-info">dir_scanner<br>web directories</div>
+        </div>
+        <div class="star" id="star19" data-info="payload/cmd/unix/reverse_netcat">
+            <div class="star-info">cmd/unix/reverse<br>netcat payload</div>
+        </div>
+        <div class="star" id="star20" data-info="exploit/multi/http/tomcat_mgr_upload">
+            <div class="star-info">tomcat_mgr_upload<br>deploy WAR</div>
+        </div>
+
+        <!-- 5 SLIDE CONTAINERS -->
+        <div class="slide-container" id="slide1">
+            <div class="slide-icon">◈ 01 ◈</div>
+            <div class="slide-info">
+                <h2 style="color: #0f0; margin-bottom: 20px;">⚡ INTRODUCTION ⚡</h2>
+                <pre style="color: #0f0; font-size: 12px;">
+╔══════════════════════╗
+║    WHAT IS METASPLOIT║
+╚══════════════════════╝
+
+• Penetration testing framework
+• 2000+ exploits
+• 500+ payloads
+• Developed by Rapid7
+• Open source framework
+
+[*] Used by:
+    - Security professionals
+    - Ethical hackers
+    - Penetration testers
+                </pre>
+            </div>
+        </div>
+
+        <div class="slide-container" id="slide2">
+            <div class="slide-icon">◈ 02 ◈</div>
+            <div class="slide-info">
+                <h2 style="color: #0f0; margin-bottom: 20px;">⚡ ARCHITECTURE ⚡</h2>
+                <pre style="color: #0f0; font-size: 12px;">
+╔══════════════════════╗
+║    MSF COMPONENTS    ║
+╚══════════════════════╝
+
+██ Exploits
+   └─ Code that breaks in
+
+██ Payloads
+   └─ What runs after
+
+██ Encoders
+   └─ AV evasion
+
+██ Auxiliary
+   └─ Scanners, fuzzers
+
+██ Post
+   └─ Post-exploitation
+                </pre>
+            </div>
+        </div>
+
+        <div class="slide-container" id="slide3">
+            <div class="slide-icon">◈ 03 ◈</div>
+            <div class="slide-info">
+                <h2 style="color: #0f0; margin-bottom: 20px;">⚡ BASIC COMMANDS ⚡</h2>
+                <pre style="color: #0f0; font-size: 12px;">
+╔══════════════════════╗
+║    msfconsole       ║
+╚══════════════════════╝
+
+msf > search exploit
+msf > use exploit/...
+msf > show options
+msf > set RHOSTS x.x.x.x
+msf > set PAYLOAD ...
+msf > check
+msf > exploit
+
+[*] Session opened!
+                </pre>
+            </div>
+        </div>
+
+        <div class="slide-container" id="slide4">
+            <div class="slide-icon">◈ 04 ◈</div>
+            <div class="slide-info">
+                <h2 style="color: #0f0; margin-bottom: 20px;">⚡ FAMOUS EXPLOITS ⚡</h2>
+                <pre style="color: #0f0; font-size: 12px;">
+╔══════════════════════╗
+║    HISTORICAL       ║
+╚══════════════════════╝
+
+🔴 EternalBlue (MS17-010)
+   └─ WannaCry ransomware
+
+🔴 Shellshock
+   └─ Bash vulnerability
+
+🔴 Heartbleed
+   └─ OpenSSL leak
+
+🔴 BlueKeep (CVE-2019-0708)
+   └─ RDP RCE
+
+🔴 SambaCry
+   └─ Linux SMB
+                </pre>
+            </div>
+        </div>
+
+        <div class="slide-container" id="slide5">
+            <div class="slide-icon">◈ 05 ◈</div>
+            <div class="slide-info">
+                <h2 style="color: #0f0; margin-bottom: 20px;">⚡ DEFENSE ⚡</h2>
+                <pre style="color: #0f0; font-size: 12px;">
+╔══════════════════════╗
+║    PROTECTION       ║
+╚══════════════════════╝
+
+🛡️ Keep systems updated
+🛡️ Patch management
+🛡️ Network segmentation
+🛡️ IDS/IPS (Snort)
+🛡️ Least privilege
+🛡️ Regular audits
+🛡️ Security training
+
+[!] "Know yourself, 
+     know your enemy"
+                </pre>
+            </div>
+        </div>
+
+        <!-- Meteor Container -->
+        <div class="meteor-container" id="meteorContainer"></div>
+        
+        <!-- END PRESENTATION BUTTON - SMALL AT BOTTOM -->
+        <div class="end-button" id="endButton">[ end presentation ]</div>
+        
+        <!-- Hacker text -->
+        <div class="hacker-text">
+            msf > search eternalblue
+            msf > use exploit/windows/smb/ms17_010_eternalblue
+            msf > set RHOSTS 192.168.1.100
+            msf > exploit
+            [*] Meterpreter session 1 opened
+        </div>
+    </div>
+
+    <script src="/scripts/meta.js"></script>
+</body>
+</html>

